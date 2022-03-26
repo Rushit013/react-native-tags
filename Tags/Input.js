@@ -1,7 +1,11 @@
 import React from "react";
-import { View, TextInput } from "react-native";
+import { View } from "react-native";
+import { TextInput } from 'react-native-paper';
 
 import styles from "./styles";
+
+const appThemeWhite = '#FFFFFF';
+const appThemeBlack = '#000000';
 
 const Input = (props) => {
 
@@ -11,7 +15,9 @@ const Input = (props) => {
     onSubmitEditing,
     inputStyle,
     inputContainerStyle,
-    textInputProps
+    textInputProps,
+    inputTheme,
+    inputLabel
   } = props;
 
   return (
@@ -19,7 +25,11 @@ const Input = (props) => {
       <TextInput
         {...textInputProps}
         style={[styles.textInput, inputStyle]}
+        theme={inputTheme}
+        placeholder={inputLabel}
+        label={inputLabel}
         value={value}
+        mode={'outlined'}
         onChangeText={onChangeText}
         onSubmitEditing={onSubmitEditing}
         underlineColorAndroid="transparent"

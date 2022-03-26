@@ -70,7 +70,9 @@ class Tags extends React.Component {
       tagTextStyle,
       deleteTagOnPress,
       onTagPress,
-      renderTag
+      renderTag,
+      inputTheme,
+      inputLabel
     } = this.props;
 
     return (
